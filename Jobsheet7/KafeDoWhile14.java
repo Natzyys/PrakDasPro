@@ -24,7 +24,5 @@ public class KafeDoWhile14 {
             System.out.println("Total yang harus dibayar: " + totalHarga);
             input.nextLine();
         } while (true);
-
-    
     }
 }

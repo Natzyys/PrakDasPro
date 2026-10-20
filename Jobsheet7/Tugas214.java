@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class Tugas214 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int jenis = 0;
+        int durasi = 0;
+        int total = 0;
+        
+        do {
+            System.out.print("Masukkan jenis (1 mobil, 2 motor, 0 keluar): ");
+            jenis = input.nextInt();
+            
+            if (jenis == 1 || jenis == 2) {
+                
+                System.out.print("Masukkan durasi (jam): ");
+                durasi = input.nextInt();
+                
+                if (jenis == 1) {
+                    total += durasi * 3000;
+                } else {
+                    total += durasi * 2000;
+                }
+            }
+            
+        } while (jenis != 0); 
+        System.out.println("Total pembayaran parkir: Rp " + total);
+        
+    }
+}
