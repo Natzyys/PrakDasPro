@@ -19,6 +19,5 @@ public class SiakadFor14 {
         }
         System.out.println("Niai tertinggi: " + tertinggi);
         System.out.println("Niai terendah: " + terendah);
-
     }
 }
