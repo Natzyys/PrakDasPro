@@ -17,14 +17,12 @@ public class Tugas214 {
                 durasi = input.nextInt();
                 
                 if (jenis == 1) {
-                    total += durasi * 3000;
+                    total += durasi * 3000; 
                 } else {
-                    total += durasi * 2000;
+                    total += durasi * 2000; 
                 }
             }
-            
         } while (jenis != 0); 
-        System.out.println("Total pembayaran parkir: Rp " + total);
-        
+        System.out.println("Total pembayaran parkir: Rp " + total);  
     }
 }
