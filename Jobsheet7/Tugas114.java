@@ -7,11 +7,13 @@ public class Tugas114 {
     }
 
     public static void diskon() {
+        Scanner input = new Scanner(System.in);
         int hargaTiket = 50000;
-        boolean loop = true;
-        while (loop) {
-            Scanner input = new Scanner(System.in);
-            System.out.print("Masukkan jumlah tiket: ");
+        int totalTiket = 0;
+        int totalHarga = 0;
+
+        while (true) {
+            System.out.print("Masukkan jumlah tiket (0 untuk selesai): ");
             int jumTiket = input.nextInt();
 
             if (jumTiket < 0) {
@@ -19,16 +21,25 @@ public class Tugas114 {
                 continue;
             }
 
-            if (jumTiket > 4) {
-                if (jumTiket > 10) {
-                    System.out.println("anda mendapatkan diskon 15%");
-                    break;
-                }
-                System.out.println("anda mendapatkan diskon 10%");
+            if (jumTiket == 0) {
+                break;
             }
-            System.out.println("tiket yang terjual: " + jumTiket + " tiket");
-            System.out.println("penjualan harga tiket 1 hari: Rp" + jumTiket*hargaTiket);
-        loop = false;
+
+            int harga = jumTiket * hargaTiket;
+            if (jumTiket > 10) {
+                System.out.println("anda mendapatkan diskon 15%");
+                harga = harga * 85 / 100;
+            } else if (jumTiket > 4) {
+                System.out.println("anda mendapatkan diskon 10%");
+                harga = harga * 90 / 100;
+            }
+            System.out.println("harga yang dibayar: Rp" + harga);
+
+            totalTiket += jumTiket;
+            totalHarga += harga;
         }
+
+        System.out.println("total tiket yang terjual: " + totalTiket + " tiket");
+        System.out.println("total penjualan harga tiket 1 hari: Rp" + totalHarga);
     }
 }
